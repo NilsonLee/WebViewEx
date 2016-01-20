@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://s.golfdas.com/buynow/index/" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aS8-Bm-KtB">
+                                <rect key="frame" x="31" y="47" width="538" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="538" id="46X-HU-nvY"/>
+                                    <constraint firstAttribute="height" constant="30" id="aEa-kH-3eU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="send"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ScC-o3-AH0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5G-v0-AXN">
+                                <rect key="frame" x="31" y="91" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack" destination="Npu-ql-Wxw" eventType="touchUpInside" id="23R-uo-4Ar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJD-Gl-i70">
+                                <rect key="frame" x="89" y="91" width="57" height="30"/>
+                                <state key="normal" title="Forward">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goForward" destination="Npu-ql-Wxw" eventType="touchUpInside" id="dBK-zt-4wt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlV-8D-Kzd">
+                                <rect key="frame" x="166" y="91" width="49" height="30"/>
+                                <state key="normal" title="Reload">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reload" destination="Npu-ql-Wxw" eventType="touchUpInside" id="pqp-Vi-wZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sye-fQ-hRa">
+                                <rect key="frame" x="233" y="91" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopLoading" destination="Npu-ql-Wxw" eventType="touchUpInside" id="Ios-b4-itB"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="thO-8y-Xm3">
+                                <rect key="frame" x="486" y="91" width="37" height="37"/>
+                                <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-ql-Wxw">
+                                <rect key="frame" x="-8" y="129" width="608" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ONn-s4-erb"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FD-a9-up9">
+                                <rect key="frame" x="539" y="91" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="jTK-qV-GMu"/>
+                                    <constraint firstAttribute="height" constant="30" id="jXb-s9-aeF"/>
+                                </constraints>
+                                <state key="normal" title="GO">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pw-3V-i84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZJD-Gl-i70" firstAttribute="leading" secondItem="m5G-v0-AXN" secondAttribute="trailing" constant="23" id="2fS-CI-RNX"/>
+                            <constraint firstItem="m5G-v0-AXN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="5dy-pN-nFU"/>
+                            <constraint firstItem="5FD-a9-up9" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="9Al-Jg-Ffs"/>
+                            <constraint firstItem="aS8-Bm-KtB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="ISX-B7-6Pg"/>
+                            <constraint firstItem="aS8-Bm-KtB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="IeV-To-nIj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aS8-Bm-KtB" secondAttribute="trailing" constant="15" id="SYe-oc-VO9"/>
+                            <constraint firstItem="5FD-a9-up9" firstAttribute="leading" secondItem="thO-8y-Xm3" secondAttribute="trailing" constant="16" id="TNt-HQ-DoW"/>
+                            <constraint firstItem="NlV-8D-Kzd" firstAttribute="leading" secondItem="ZJD-Gl-i70" secondAttribute="trailing" constant="20" id="UhD-ha-8ab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Npu-ql-Wxw" secondAttribute="trailing" constant="-16" id="Uma-Bi-vUh"/>
+                            <constraint firstItem="thO-8y-Xm3" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="b5f-CT-bZD"/>
+                            <constraint firstItem="m5G-v0-AXN" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="cQw-I4-F3v"/>
+                            <constraint firstItem="Npu-ql-Wxw" firstAttribute="top" secondItem="thO-8y-Xm3" secondAttribute="bottom" constant="1" id="dHr-UI-nnb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Npu-ql-Wxw" secondAttribute="bottom" id="fzo-yf-hhr"/>
+                            <constraint firstItem="Sye-fQ-hRa" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="gfn-td-hHj"/>
+                            <constraint firstItem="NlV-8D-Kzd" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="gqS-Dr-d7F"/>
+                            <constraint firstItem="ZJD-Gl-i70" firstAttribute="top" secondItem="aS8-Bm-KtB" secondAttribute="bottom" constant="14" id="oyS-8x-rqL"/>
+                            <constraint firstItem="Sye-fQ-hRa" firstAttribute="leading" secondItem="NlV-8D-Kzd" secondAttribute="trailing" constant="18" id="qjq-NL-ecC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5FD-a9-up9" secondAttribute="trailing" constant="15" id="vfE-YI-XfY"/>
+                            <constraint firstItem="Npu-ql-Wxw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="zWZ-5C-Y9n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadindIndicatorView" destination="thO-8y-Xm3" id="gF6-sD-UQ5"/>
+                        <outlet property="theWebView" destination="Npu-ql-Wxw" id="S1S-vJ-Ylp"/>
+                        <outlet property="urlTextField" destination="aS8-Bm-KtB" id="A46-V1-e69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
